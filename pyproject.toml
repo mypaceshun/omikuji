@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "omikuji"
+version = "0.9.0"
+description = "Simple omikuji application"
+authors = ["KAWAI Shun <shun@osstech.co.jp>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+  { include="omikuji", from="src/" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.scripts]
+omikuji = "omikuji.command:cmd"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
